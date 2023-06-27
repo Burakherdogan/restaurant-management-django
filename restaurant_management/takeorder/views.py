@@ -1,4 +1,7 @@
 from django.shortcuts import render
-
+from.models import Tables
 def takeorder(request):
-    return render(request, "index.html")
+    data = {
+        "tables": Tables.objects.all(),
+    }
+    return render(request, "index.html",data)
