@@ -5,3 +5,5 @@ def takeorder(request):
         "tables": Tables.objects.all(),
     }
     return render(request, "index.html",data)
+def takeorder(request):
+    return render(request, "take_order.html" )
