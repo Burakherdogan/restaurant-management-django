@@ -13,8 +13,8 @@
         <div class="card-body bg-primary {% if table.status_of_table  %} bg-danger {% endif %}">
           <h5 class="card-title ">{{table.id}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">Table</h6>
-          <a class="{% if table.status_of_table  %} d-none {% endif %}" href="#" class="card-link">Take Order</a>
-          <a class="{% if table.status_of_table  %} {% else %} d-none {% endif %}" href="#" class="card-link">Re-order</a>
+          <a class="{% if table.status_of_table  %} d-none {% endif %}" href="take-order" class="card-link">Take Order</a>
+          <a class="{% if table.status_of_table  %} {% else %} d-none {% endif %}" href="take-order" class="card-link">Re-order</a>
           <a href="#" class="card-link">Get Bill</a>
         </div>
       </div>

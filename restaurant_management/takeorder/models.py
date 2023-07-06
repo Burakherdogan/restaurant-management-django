@@ -1,21 +1,13 @@
 from django.db import models
 
 class Tables(models.Model):
-    number_of_table = models.IntegerField(),
-    status_of_table = models.BooleanField(default=True)
+    table_number = models.IntegerField()
+    status_of_table = models.BooleanField(default=False)
+    
 
 class Category(models.Model):
-    category_number = models.IntegerField(),
-    category_img = models.ImageField(),
-    category_name = models.CharField(),
-
-class Menu(models.Model):
-    category_number = models.ForeignKey(Category, on_delete=models.CASCADE)
-    product_name = models.CharField(),
-    product_price = models.IntegerField(),
-    quantity = models.IntegerField(),
-    product_img = models.ImageField(),
+    name = models.CharField(max_length=50)
+    number = models.IntegerField()    
     
-    
-class CheckOut(models.Model):
-        bill = models.IntegerField(default=0)
+    def __str__(self):
+        return self.name
